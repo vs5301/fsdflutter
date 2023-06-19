@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fsdflutter/tutorials/page_one.dart';
+import 'package:fsdflutter/tutorials/page_two.dart';
+import 'package:fsdflutter/tutorials/stateful_widget_tutorial.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +33,13 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      // home: PageOne (),
+      initialRoute: "/",
+      routes: {
+        '/': (context) => PageOne(),
+        '/pageTwo': (context) => PageTwo(),
+      }
+
     );
   }
 }
