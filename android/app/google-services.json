@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "601737142432",
+    "project_id": "fsdangular-490b1",
+    "storage_bucket": "fsdangular-490b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601737142432:android:a49fe82209ebac714b29c5",
+        "android_client_info": {
+          "package_name": "com.auribises.fsdflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601737142432-e70se8aoa39m19eqp2t69p1gb3slhvdj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDJVDDFgJgwnmT1dsitn21K96XsglGnwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601737142432-e70se8aoa39m19eqp2t69p1gb3slhvdj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fsdflutter/tutorials/news_details.dart';
+import 'package:fsdflutter/tutorials/news_list_page.dart';
 import 'package:fsdflutter/tutorials/page_one.dart';
 import 'package:fsdflutter/tutorials/page_two.dart';
 import 'package:fsdflutter/tutorials/stateful_widget_tutorial.dart';
@@ -34,10 +36,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: PageOne (),
-      initialRoute: "/",
+      initialRoute: "/newsList",
       routes: {
         '/': (context) => PageOne(),
         '/pageTwo': (context) => PageTwo(),
+        '/newsList': (context) => NewsListPage(),
+        '/newsDetails': (context) => NewsDetails()
       }
 
     );
@@ -64,7 +68,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("Foodie"),),
+        appBar: AppBar(title: Text("FSDFlutter"),),
         body: Container(
             color: Colors.white,
             child: Center(
