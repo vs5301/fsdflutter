@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:fsdflutter/tutorials/bottom_navbar.dart';
+import 'package:fsdflutter/tutorials/navigation_drawer.dart';
 import 'package:fsdflutter/tutorials/news_details.dart';
 import 'package:fsdflutter/tutorials/news_list_page.dart';
 import 'package:fsdflutter/tutorials/page_one.dart';
 import 'package:fsdflutter/tutorials/page_two.dart';
 import 'package:fsdflutter/tutorials/stateful_widget_tutorial.dart';
+import 'package:fsdflutter/tutorials/tab_navigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,13 +38,16 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false,
       // home: PageOne (),
-      initialRoute: "/newsList",
+      initialRoute: "/bottom",
       routes: {
         '/': (context) => PageOne(),
         '/pageTwo': (context) => PageTwo(),
         '/newsList': (context) => NewsListPage(),
-        '/newsDetails': (context) => NewsDetails()
+        '/newsDetails': (context) => NewsDetails(),
+        '/drawer': (context) => NavigationDrawerPage(),
+        '/bottom': (context) => BottomNavigationPage()
       }
 
     );
