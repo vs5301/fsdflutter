@@ -3,6 +3,7 @@ import 'package:fsdflutter/tutorials/bottom_navbar.dart';
 import 'package:fsdflutter/tutorials/navigation_drawer.dart';
 import 'package:fsdflutter/tutorials/news_details.dart';
 import 'package:fsdflutter/tutorials/news_list_page.dart';
+import 'package:fsdflutter/tutorials/news_page.dart';
 import 'package:fsdflutter/tutorials/page_one.dart';
 import 'package:fsdflutter/tutorials/page_two.dart';
 import 'package:fsdflutter/tutorials/stateful_widget_tutorial.dart';
@@ -40,14 +41,15 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       // home: PageOne (),
-      initialRoute: "/bottom",
+      initialRoute: "/newsApi",
       routes: {
         '/': (context) => PageOne(),
         '/pageTwo': (context) => PageTwo(),
         '/newsList': (context) => NewsListPage(),
         '/newsDetails': (context) => NewsDetails(),
         '/drawer': (context) => NavigationDrawerPage(),
-        '/bottom': (context) => BottomNavigationPage()
+        '/bottom': (context) => BottomNavigationPage(),
+        '/newsApi': (context) => NewsPage()
       }
 
     );
