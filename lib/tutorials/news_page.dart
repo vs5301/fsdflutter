@@ -3,11 +3,10 @@ import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 import 'package:webview_flutter/webview_flutter.dart';
 
-import 'package:webview_flutter/platform_interface.dart';
 
 Future<String> fetchNewsFromWebService() async{
   String apiKey = "4c84650c829d4d2b8aff4d8bdcd0cbd5";
-  String url = "https://newsapi.org/v2/everything?q=tesla&from=2023-05-26&sortBy=publishedAt&apiKey="+apiKey;
+  String url = "https://newsapi.org/v2/everything?q=tesla&from=2023-05-26&sortBy=publishedAt&apiKey=$apiKey";
   
   var response = await http.get(Uri.parse(url));
   // http.post(url, {});
@@ -23,9 +22,9 @@ class NewsPage extends StatelessWidget {
     List articles = jsonData['articles'];
     List<Widget> widgets = [];
     
-    articles.forEach((element) { 
+    for (var element in articles) { 
       widgets.add(element['urlToImage'] != null ? Image.network(element['urlToImage']): Container());
-      widgets.add(Divider());
+      widgets.add(const Divider());
       widgets.add(ListTile(
       title: Text(element['title']),
       subtitle: Text(element['publishedAt']),
@@ -34,11 +33,11 @@ class NewsPage extends StatelessWidget {
         Navigator.push(context, route);
       },
       ));
-      widgets.add(SizedBox(height: 6,));
-    });
+      widgets.add(const SizedBox(height: 6,));
+    }
 
     return ListView(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       children: widgets,
     );
   }
@@ -47,7 +46,7 @@ class NewsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Latest Business News"),
+        title: const Text("Latest Business News"),
       ),
       body: FutureBuilder(
         future: fetchNewsFromWebService(),
@@ -55,7 +54,7 @@ class NewsPage extends StatelessWidget {
           if(snapshot.hasData){
             return parseResponseFromWebService(snapshot.data.toString(), context);
           }else {
-            return Center(
+            return const Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -83,7 +82,7 @@ class NewsInWebview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("News"),
+          title: const Text("News"),
         ),
         body: WebView(
           initialUrl: url,

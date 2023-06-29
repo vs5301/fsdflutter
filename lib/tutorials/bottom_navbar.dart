@@ -12,33 +12,84 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
   int index = 0;
   var textList = ["Welcome to Home", "Welcome to Profile", "Welcome to Settings"];
   var widgetList = [
-    Center(child: Text("This is Tab1", style: TextStyle(color: Colors.red),)),
+    SingleChildScrollView(
+      child: Column(
+        children: [
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(bottom: 11),
+                  height: 200,
+                  width: 200,
+                  color: Colors.lightGreen
+                ),
+                Container(
+                    margin: EdgeInsets.only(bottom: 11),
+                    height: 200,
+                    width: 200,
+                    color: Colors.orange
+                ),
+                Container(
+                    margin: EdgeInsets.only(bottom: 11),
+                    height: 200,
+                    width: 200,
+                    color: Colors.blue
+                ),
+                Container(
+                    margin: EdgeInsets.only(bottom: 11),
+                    height: 200,
+                    width: 200,
+                    color: Colors.grey
+                ),
+              ],
+            ),
+          ),
+          Container(
+              margin: EdgeInsets.only(bottom: 11),
+              height: 200,
+              color: Colors.orange
+          ),
+          Container(
+              margin: EdgeInsets.only(bottom: 11),
+              height: 200,
+              color: Colors.blue
+          ),
+          Container(
+              margin: EdgeInsets.only(bottom: 11),
+              height: 200,
+              color: Colors.grey
+          ),
+        ],
+      ),
+    ),
     ListTile(
-      title: Text("Payment Settings"),
-      subtitle: Text("Payment information"),
-      leading: Icon(Icons.payment) ,
-      trailing: Icon(Icons.keyboard_arrow_right),
+      title: const Text("Payment Settings"),
+      subtitle: const Text("Payment information"),
+      leading: const Icon(Icons.payment) ,
+      trailing: const Icon(Icons.keyboard_arrow_right),
       onTap: (){
 
       },
     ),
-    Text("This is Tab3", style: TextStyle(color: Colors.green),),
+    const Text("This is Tab3", style: TextStyle(color: Colors.green),),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Bottom Navbar"),
+        title: const Text("Bottom Navbar"),
       ),
       body: Center(
-        child: widgetList[index],
+        child: widgetList[index]
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: "Home",
+            label: "ScrollView",
             backgroundColor: Colors.tealAccent,
           ),
           BottomNavigationBarItem(

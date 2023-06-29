@@ -20,7 +20,7 @@ class _QuotesPageState extends State<QuotesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("QuotesPage"),
+        title: const Text("QuotesPage"),
       ),
       body: Container(
         color: Colors.black,
@@ -29,8 +29,8 @@ class _QuotesPageState extends State<QuotesPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(quotes[index], style: TextStyle(color: Colors.amber, fontSize: 24, fontWeight: FontWeight.bold),),
-            SizedBox(height: 8,),
+            Text(quotes[index], style: const TextStyle(color: Colors.amber, fontSize: 24, fontWeight: FontWeight.bold),),
+            const SizedBox(height: 8,),
             ElevatedButton(onPressed: (){
               setState(() {
                 index++;
@@ -38,7 +38,7 @@ class _QuotesPageState extends State<QuotesPage> {
                   index = 0;
                 }
               });
-            }, child: Text("Next", style: TextStyle(color: Colors.amber, fontSize: 20))),
+            }, child: const Text("Next", style: TextStyle(color: Colors.amber, fontSize: 20))),
             // SizedBox(height: 8,),
             ElevatedButton(onPressed: (){
               setState(() {
@@ -47,7 +47,7 @@ class _QuotesPageState extends State<QuotesPage> {
                   index = quotes.length - 1;
                 }
               });
-            }, child: Text("Previos", style: TextStyle(color: Colors.amber, fontSize: 20))),
+            }, child: const Text("Previos", style: TextStyle(color: Colors.amber, fontSize: 20))),
           ],
         )
       )

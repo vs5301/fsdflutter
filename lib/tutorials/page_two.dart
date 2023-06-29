@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fsdflutter/tutorials/constants.dart';
-import 'package:fsdflutter/tutorials/page_one.dart';
 
 class PageTwo extends StatelessWidget {
   const PageTwo({super.key});
@@ -9,7 +8,7 @@ class PageTwo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(pageTwoTitle)
+        title: const Text(pageTwoTitle)
       ),
         body: Container(
           width: MediaQuery.of(context).size.width,
@@ -19,13 +18,13 @@ class PageTwo extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Text(pageTwoTitle, style: TextStyle(color: Colors.white),),
-              SizedBox(height: 24,),
+              const SizedBox(height: 24,),
               ElevatedButton(onPressed: (){
                 Navigator.pop(context);
               }, child: const Text("Navigate Back"))
             ],
           ),
         )
-    );;
+    );
   }
 }

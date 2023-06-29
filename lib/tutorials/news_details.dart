@@ -39,7 +39,7 @@ class _NewsDetailsState extends State<NewsDetails> {
 
 class NewsDetails extends StatefulWidget {
 
-  NewsDetails({Key? key}): super(key: key);
+  const NewsDetails({Key? key}): super(key: key);
 
   @override
   State<NewsDetails> createState() => _NewsDetailsState();

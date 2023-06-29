@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fsdflutter/tutorials/constants.dart';
-import 'package:fsdflutter/tutorials/page_two.dart';
 
 class PageOne extends StatelessWidget {
   const PageOne({super.key});
@@ -19,11 +18,11 @@ class PageOne extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Text(pageOneTitle, style: TextStyle(color: Colors.white),),
-          SizedBox(height: 24,),
+          const SizedBox(height: 24,),
           ElevatedButton(onPressed: (){
             // var route = MaterialPageRoute(builder: (context) => PageTwo());
             // Navigator.push(context, route);
-            Navigator.pushNamed(context, "newsList");
+            Navigator.pushNamed(context, "/pageTwo");
           }, child: const Text("Navigate to Page Two"))
         ],
       ),
