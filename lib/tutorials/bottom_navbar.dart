@@ -23,25 +23,53 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
                   margin: EdgeInsets.only(bottom: 11),
                   height: 200,
                   width: 200,
-                  color: Colors.lightGreen
+                  decoration: BoxDecoration(
+                      color: Colors.lightGreen,
+                      borderRadius: BorderRadius.circular(21),
+                      border: Border.all(
+                          width: 2,
+                          color: Colors.black
+                        )
+                    )
                 ),
                 Container(
                     margin: EdgeInsets.only(bottom: 11),
                     height: 200,
                     width: 200,
-                    color: Colors.orange
+                    decoration: BoxDecoration(
+                        color: Colors.orange,
+                        borderRadius: BorderRadius.circular(21),
+                        border: Border.all(
+                            width: 2,
+                            color: Colors.black
+                        )
+                    )
                 ),
                 Container(
                     margin: EdgeInsets.only(bottom: 11),
                     height: 200,
                     width: 200,
-                    color: Colors.blue
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(21),
+                        border: Border.all(
+                            width: 2,
+                            color: Colors.black
+                        )
+                    )
                 ),
                 Container(
                     margin: EdgeInsets.only(bottom: 11),
                     height: 200,
                     width: 200,
-                    color: Colors.grey
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(21),
+                        border: Border.all(
+                            width: 2,
+                            color: Colors.black
+                        )
+                    )
                 ),
               ],
             ),
@@ -49,17 +77,45 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
           Container(
               margin: EdgeInsets.only(bottom: 11),
               height: 200,
-              color: Colors.orange
+              decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(21),
+                  border: Border.all(
+                      width: 2,
+                      color: Colors.black
+                  ),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 51,
+                    color: Colors.grey,
+                    spreadRadius: 21,
+                  )
+                ],
+              ),
           ),
           Container(
               margin: EdgeInsets.only(bottom: 11),
               height: 200,
-              color: Colors.blue
+              decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(21),
+                  border: Border.all(
+                      width: 2,
+                      color: Colors.black
+                  )
+              )
           ),
           Container(
               margin: EdgeInsets.only(bottom: 11),
               height: 200,
-              color: Colors.grey
+              decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(21),
+                  border: Border.all(
+                      width: 2,
+                      color: Colors.black
+                  )
+              )
           ),
         ],
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fsdflutter/tutorials/bottom_navbar.dart';
+import 'package:fsdflutter/tutorials/news_list_page.dart';
 import 'package:fsdflutter/tutorials/row_columns.dart';
 import 'package:fsdflutter/tutorials/tab_navigation.dart';
 
@@ -20,7 +21,13 @@ class NavigationDrawerPage extends StatelessWidget {
         child: Container(
           width: 300,
           height: 300,
-          child: Image.asset('assets/img/flutter-icon.png'),
+          child: Container(
+            width: 200,
+            height: 200,
+            child: CircleAvatar(
+              backgroundImage: AssetImage("assets/img/flutter-icon.png"),
+            ),
+          )
         )
       ),
       drawer: Drawer(
@@ -36,11 +43,23 @@ class NavigationDrawerPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.blue
                 ),
-                  child: Center(
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text("John Watson", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
-                      ))
+                  child: Column(
+                    children: [
+                      Center(
+                        child: CircleAvatar(
+                          backgroundImage: AssetImage("assets/img/user.png"),
+                          backgroundColor: Colors.red,
+                          maxRadius: 40,
+                        ),
+                      ),
+                      Center(
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("John Watson", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                          )
+                      ),
+                    ],
+                  )
               ),
               Container(
                 padding: const EdgeInsets.all(8),
@@ -85,6 +104,23 @@ class NavigationDrawerPage extends StatelessWidget {
                   trailing: const Icon(Icons.keyboard_arrow_right),
                   onTap: (){
                     var route = MaterialPageRoute(builder: (context) => const RowColumnsPage());
+                    Navigator.push(context, route);
+                  },
+                ),
+              ),
+              Container(
+                color: Colors.black12,
+                height: 1,
+              ),
+              Container(
+                padding: EdgeInsets.all(8),
+                child: ListTile(
+                  title: const Text("ListView", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                  subtitle: const Text("News ListView", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),),
+                  leading: const Icon(Icons.newspaper) ,
+                  trailing: const Icon(Icons.keyboard_arrow_right),
+                  onTap: (){
+                    var route = MaterialPageRoute(builder: (context) => const NewsListPage());
                     Navigator.push(context, route);
                   },
                 ),

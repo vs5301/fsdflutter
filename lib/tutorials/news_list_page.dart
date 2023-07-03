@@ -15,11 +15,11 @@ class NewsListPage extends StatelessWidget {
         children: [
           ListTile(
             leading: const Icon(Icons.web, color: Colors.teal),
-            title: const Text("Zee News", style: TextStyle(color: Colors.teal),),
-            subtitle: const Text("news from zee channel"),
+            title: const Text("BBC", style: TextStyle(color: Colors.teal),),
+            subtitle: const Text("BBC webpage"),
             trailing: const Icon(Icons.keyboard_arrow_right),
             onTap: (){
-              var newsRef = News("Zee News","https://zeenews.india.com");
+              var newsRef = News("BBC","https://www.bbc.com/");
               // var route = MaterialPageRoute(builder: (context) => NewsDetails(news: newsRef));
               // Navigator.push(context, route);
               Navigator.pushNamed(context, '/newsDetails',arguments: newsRef);
@@ -28,10 +28,10 @@ class NewsListPage extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.web, color: Colors.teal),
             title: const Text("CNN", style: TextStyle(color: Colors.teal),),
-            subtitle: const Text("news from cnn channel"),
+            subtitle: const Text("CNN webpage"),
             trailing: const Icon(Icons.keyboard_arrow_right),
             onTap: (){
-              var newsRef = News("CNN News","https://edition.cnn.com");
+              var newsRef = News("CNN","https://edition.cnn.com");
               // var route = MaterialPageRoute(builder: (context) => NewsDetails(news: newsRef));
               // Navigator.push(context, route);
               Navigator.pushNamed(context, '/newsDetails',arguments: newsRef);
@@ -39,11 +39,11 @@ class NewsListPage extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.web, color: Colors.teal),
-            title: const Text("Aaj Tak", style: TextStyle(color: Colors.teal),),
-            subtitle: const Text("news from aaj tak channel"),
+            title: const Text("CBS", style: TextStyle(color: Colors.teal),),
+            subtitle: const Text("CBS webpage"),
             trailing: const Icon(Icons.keyboard_arrow_right),
             onTap: (){
-              var newsRef = News("Aaj Tak","https://aajtak.in");
+              var newsRef = News("CBS","https://www.cbsnews.com/");
               // var route = MaterialPageRoute(builder: (context) => NewsDetails(news: newsRef));
               // Navigator.push(context, route);
               Navigator.pushNamed(context, '/newsDetails',arguments: newsRef);
@@ -52,10 +52,10 @@ class NewsListPage extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.web, color: Colors.teal),
             title: const Text("NBC", style: TextStyle(color: Colors.teal),),
-            subtitle: const Text("news from nbc channel"),
+            subtitle: const Text("NBC webpage"),
             trailing: const Icon(Icons.keyboard_arrow_right),
             onTap: (){
-              var newsRef = News("NBC News","https://nbcnews.com");
+              var newsRef = News("NBC","https://nbcnews.com");
               // var route = MaterialPageRoute(builder: (context) => NewsDetails(news: newsRef));
               // Navigator.push(context, route);
               Navigator.pushNamed(context, '/newsDetails',arguments: newsRef);
@@ -63,11 +63,11 @@ class NewsListPage extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.web, color: Colors.teal),
-            title: const Text("India Today", style: TextStyle(color: Colors.teal),),
-            subtitle: const Text("news from india today channel"),
+            title: const Text("MSNBC", style: TextStyle(color: Colors.teal),),
+            subtitle: const Text("MSNBC webpage"),
             trailing: const Icon(Icons.keyboard_arrow_right),
             onTap: (){
-              var newsRef = News("India Today","https://indiatoday.in");
+              var newsRef = News("MSNBC","https://www.msnbc.com/");
               // var route = MaterialPageRoute(builder: (context) => NewsDetails(news: newsRef));
               // Navigator.push(context, route);
               Navigator.pushNamed(context, '/newsDetails',arguments: newsRef);

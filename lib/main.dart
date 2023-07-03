@@ -38,6 +38,11 @@ class MyApp extends StatelessWidget {
           // This works for code too, not just values: Most code changes can be
           // tested with just a hot reload.
           primarySwatch: Colors.red,
+          appBarTheme: AppBarTheme(color: Colors.red),
+          textTheme: TextTheme(
+            displayLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            titleMedium: TextStyle(fontSize: 11, fontWeight: FontWeight.w500, fontStyle: FontStyle.italic)
+          )
         ),
         debugShowCheckedModeBanner: false,
         // home: PageOne (),
