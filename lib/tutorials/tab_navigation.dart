@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class TabBarPage extends StatefulWidget {
   const TabBarPage({super.key});
@@ -42,7 +43,7 @@ class _TabBarPageState extends State<TabBarPage> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('Current Time: ${time.hour}:${time.minute}:${time.second}', style: TextStyle(fontSize: 25),),
+                            Text('Current Time: ${DateFormat('yMMMMEEEEd').format(time)}', style: TextStyle(fontSize: 25),),
                             Container(height: 20,),
                             ElevatedButton(onPressed: (){
                               setState(() {
