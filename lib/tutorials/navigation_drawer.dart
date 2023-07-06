@@ -4,8 +4,17 @@ import 'package:fsdflutter/tutorials/news_list_page.dart';
 import 'package:fsdflutter/tutorials/row_columns.dart';
 import 'package:fsdflutter/tutorials/tab_navigation.dart';
 
-class NavigationDrawerPage extends StatelessWidget {
+class NavigationDrawerPage extends StatefulWidget {
   const NavigationDrawerPage({super.key});
+
+  @override
+  State<NavigationDrawerPage> createState() => _NavigationDrawerPageState();
+}
+
+class _NavigationDrawerPageState extends State<NavigationDrawerPage> {
+
+  var unameText = TextEditingController();
+  var passText = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -17,18 +26,98 @@ class NavigationDrawerPage extends StatelessWidget {
           Icon(Icons.delete),
         ],
       ),
-      body: Center(
-        child: Container(
-          width: 300,
-          height: 300,
-          child: Container(
-            width: 200,
-            height: 200,
-            child: CircleAvatar(
-              backgroundImage: AssetImage("assets/img/flutter-icon.png"),
-            ),
-          )
-        )
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+              height: 600,
+              width: 600,
+              child: Column(
+                children: [
+                  Container(
+                    width: 200,
+                    height: 200,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("assets/img/flutter-icon.png"),
+                    ),
+                  ),
+                  Container(height: 30,),
+                  TextField(
+                    controller: unameText,
+                    keyboardType: TextInputType.phone,
+                    decoration: InputDecoration(
+                      hintText: "Enter Username",
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                          color: Colors.deepOrange,
+                          width: 2,
+                        ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                          width: 2,
+                        ),
+                      ),
+                      disabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                          color: Colors.black45,
+                          width: 2,
+                        ),
+                      ),
+                      suffixText: "Username",
+                      suffixIcon: IconButton(
+                        icon: Icon(Icons.remove_red_eye),
+                        onPressed: (){
+
+                        },
+                      ),
+                      prefixIcon: Icon(Icons.phone),
+                    ),
+                  ),
+                  Container(height: 20,),
+                  TextField(
+                    controller: passText,
+                    obscureText: true,
+                    obscuringCharacter: '*',
+                    decoration: InputDecoration(
+                        hintText: "Enter password",
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                            color: Colors.deepOrange,
+                            width: 2,
+                          ),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                            color: Colors.blue,
+                            width: 2,
+                          ),
+                        ),
+                        disabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                            color: Colors.black45,
+                            width: 2,
+                          ),
+                        ),
+                        suffixText: "Password"
+                    ),
+                  ),
+                  ElevatedButton(onPressed: (){
+                    String uName = unameText.text.toString();
+                    String uPass = passText.text.toString();
+                    print("Username is $uName and password is $uPass");
+                  }, child: Text('Login'))
+                ],
+              )
+          ),
+        ],
       ),
       drawer: Drawer(
         child: Container(
@@ -40,9 +129,9 @@ class NavigationDrawerPage extends StatelessWidget {
             padding: const EdgeInsets.all(4),
             children: [
               const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Colors.blue
-                ),
+                  decoration: BoxDecoration(
+                      color: Colors.blue
+                  ),
                   child: Column(
                     children: [
                       Center(
@@ -175,3 +264,4 @@ class NavigationDrawerPage extends StatelessWidget {
     );
   }
 }
+
