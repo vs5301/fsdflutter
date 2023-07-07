@@ -15,6 +15,7 @@ class _NavigationDrawerPageState extends State<NavigationDrawerPage> {
 
   var unameText = TextEditingController();
   var passText = TextEditingController();
+  DateTime datePicked = DateTime(2023);
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +114,7 @@ class _NavigationDrawerPageState extends State<NavigationDrawerPage> {
                     String uName = unameText.text.toString();
                     String uPass = passText.text.toString();
                     print("Username is $uName and password is $uPass");
-                  }, child: Text('Login'))
+                  }, child: Text('Login')),
                 ],
               )
           ),

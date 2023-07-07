@@ -38,19 +38,46 @@ class _TabBarPageState extends State<TabBarPage> {
                 children: [
                   Center(
                       child: Container(
-                        width: 200,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Current Time: ${DateFormat('yMMMMEEEEd').format(time)}', style: TextStyle(fontSize: 25),),
-                            Container(height: 20,),
-                            ElevatedButton(onPressed: (){
-                              setState(() {
+                        child: SingleChildScrollView(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('Current Time: ${DateFormat('yMMMMEEEEd').format(time)}', style: TextStyle(fontSize: 25),),
+                              Container(height: 20,),
+                              ElevatedButton(onPressed: (){
+                                setState(() {
 
-                              });
-                            }, child: Text("Refresh"))
-                          ],
+                                });
+                              }, child: Text("Refresh")),
+                              Container(height: 10),
+                              Text('Select Date', style: TextStyle(fontSize: 25)),
+                              ElevatedButton(onPressed: () async {
+                                DateTime? datePicked = (await showDatePicker(
+                                    context: context,
+                                    initialDate: DateTime.now(),
+                                    firstDate: DateTime(2021),
+                                    lastDate: DateTime(2025)))!;
+
+                                if(datePicked != null){
+                                  print(datePicked);
+                                }
+
+                              }, child: Text("Show")),
+                              Container(height: 10),
+                              Text('Select Time', style: TextStyle(fontSize: 25)),
+                              ElevatedButton(onPressed: () async {
+                                TimeOfDay? timePicked = (await showTimePicker(
+                                    context: context,
+                                    initialTime: TimeOfDay.now(),
+                                    initialEntryMode: TimePickerEntryMode.dial
+                                ));
+
+                                if(timePicked != null){
+                                  print(timePicked);
+                                }
+                              }, child: Text("Show")),
+                            ],
+                          ),
                         ),
                       ),
                   ),

@@ -9,6 +9,7 @@ class BottomNavigationPage extends StatefulWidget {
 
 class _BottomNavigationPageState extends State<BottomNavigationPage> {
 
+  late DateTime datePicked;
   int index = 0;
   var textList = ["Welcome to Home", "Welcome to Profile", "Welcome to Settings"];
   var widgetList = [
@@ -119,15 +120,6 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
           ),
         ],
       ),
-    ),
-    ListTile(
-      title: const Text("Payment Settings"),
-      subtitle: const Text("Payment information"),
-      leading: const Icon(Icons.payment) ,
-      trailing: const Icon(Icons.keyboard_arrow_right),
-      onTap: (){
-
-      },
     ),
     const Text("This is Tab3", style: TextStyle(color: Colors.green),),
   ];
