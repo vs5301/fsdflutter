@@ -21,7 +21,8 @@ class PageTwo extends StatelessWidget {
               const SizedBox(height: 24,),
               ElevatedButton(onPressed: (){
                 Navigator.pop(context);
-              }, child: const Text("Navigate Back"))
+              }, child: const Text("Navigate Back")),
+
             ],
           ),
         )

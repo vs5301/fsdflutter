@@ -11,6 +11,15 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
 
   late DateTime datePicked;
   int index = 0;
+  var arrColors = [
+    Colors.red,
+    Colors.grey,
+    Colors.blue,
+    Colors.pink,
+    Colors.green,
+    Colors.purpleAccent,
+    Colors.brown
+  ];
   var textList = ["Welcome to Home", "Welcome to Profile", "Welcome to Settings"];
   var widgetList = [
     SingleChildScrollView(
@@ -121,6 +130,7 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
         ],
       ),
     ),
+    const Text("This is Tab3", style: TextStyle(color: Colors.green),),
     const Text("This is Tab3", style: TextStyle(color: Colors.green),),
   ];
 

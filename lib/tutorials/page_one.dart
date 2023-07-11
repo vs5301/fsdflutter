@@ -23,8 +23,9 @@ class PageOne extends StatelessWidget {
             // var route = MaterialPageRoute(builder: (context) => PageTwo());
             // Navigator.push(context, route);
             Navigator.pushNamed(context, "/pageTwo");
-          }, child: const Text("Navigate to Page Two"))
+          }, child: const Text("Navigate to Page Two")),
         ],
+
       ),
     )
     );
