@@ -130,8 +130,80 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
         ],
       ),
     ),
-    const Text("This is Tab3", style: TextStyle(color: Colors.green),),
-    const Text("This is Tab3", style: TextStyle(color: Colors.green),),
+    RichText(
+        text: TextSpan(
+          style: TextStyle(
+            color: Colors.grey,
+            fontSize: 21
+          ),
+          children: <TextSpan>[
+            TextSpan(text: 'Hello'),
+            TextSpan(text: 'World!', style: TextStyle(
+              fontSize: 34,
+              color: Colors.blue,
+              fontWeight: FontWeight.bold,
+            )),
+            TextSpan(
+              text: 'Welcome to ',
+            ),
+            TextSpan(
+              text: 'Flutter',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 43,
+                color: Colors.deepOrangeAccent,
+                fontStyle: FontStyle.italic,
+                fontFamily: 'Montserrat',
+              )
+            )
+          ]
+        )
+    ),
+    // const Text("This is Tab3", style: TextStyle(color: Colors.green),),
+    // const Text("This is Tab3", style: TextStyle(color: Colors.green),),
+    Wrap(
+      direction: Axis.vertical,
+      alignment: WrapAlignment.center,
+      spacing: 11,
+      runSpacing: 5,
+      children: [
+        Container(
+          width: 100,
+          height: 100,
+          color: Colors.grey,
+        ),
+        Container(
+            width: 100,
+            height: 100,
+            color: Colors.blue,
+        ),
+        Container(
+            width: 100,
+            height: 100,
+            color: Colors.grey,
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Colors.blue,
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Colors.grey,
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Colors.blue,
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Colors.grey,
+        ),
+      ],
+    )
   ];
 
   @override

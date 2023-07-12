@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fsdflutter/tutorials/bottom_navbar.dart';
+import 'package:fsdflutter/tutorials/calculator.dart';
 import 'package:fsdflutter/tutorials/news_list_page.dart';
 import 'package:fsdflutter/tutorials/row_columns.dart';
 import 'package:fsdflutter/tutorials/tab_navigation.dart';
@@ -219,19 +220,23 @@ class _NavigationDrawerPageState extends State<NavigationDrawerPage> {
                 color: Colors.black12,
                 height: 1,
               ),
-              // ListTile(
-              //   title: Text("DigiLocker"),
-              //   subtitle: Text("Payment information"),
-              //   leading: Icon(Icons.lock) ,
-              //   trailing: Icon(Icons.keyboard_arrow_right),
-              //   onTap: (){
-              //
-              //   },
-              // ),
-              // Container(
-              //   color: Colors.black12,
-              //   height: 1,
-              // ),
+              Container(
+                padding: EdgeInsets.all(8),
+                child: ListTile(
+                  title: Text("Basic Calculations",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                  subtitle: Text("Stateful widget usage", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),),
+                  leading: Icon(Icons.lock) ,
+                  trailing: Icon(Icons.keyboard_arrow_right),
+                  onTap: (){
+                    var route = MaterialPageRoute(builder: (context) => const CalculatorPage());
+                    Navigator.push(context,route);
+                  },
+                ),
+              ),
+              Container(
+                color: Colors.black12,
+                height: 1,
+              ),
               // ListTile(
               //   title: Text("Profile Settings"),
               //   subtitle: Text("Payment information"),

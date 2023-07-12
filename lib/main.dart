@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fsdflutter/tutorials/calculator.dart';
+import 'package:fsdflutter/tutorials/custom_widget.dart';
 import 'package:fsdflutter/tutorials/widget_class.dart';
 import 'package:fsdflutter/tutorials/bottom_navbar.dart';
 import 'package:fsdflutter/tutorials/navigation_drawer.dart';
@@ -48,7 +50,7 @@ class MyApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         // home: PageOne (),
-        initialRoute: '/stackWidget',
+        initialRoute: '/drawer',
         routes: {
           '/': (context) => const NavigationDrawerPage(),
           '/home': (context) => const HomePage(),
@@ -61,8 +63,10 @@ class MyApp extends StatelessWidget {
           '/newsApi': (context) => const NewsPage(),
           '/rowcol': (context) => const RowColumnsPage(),
           '/tabnav': (context) => const TabBarPage(),
-          '/customWidget': (context) => const WidgetClassPage(),
+          '/widgetClass': (context) => const WidgetClassPage(),
           '/stackWidget': (context) => const StackWidgetPage(),
+          '/customWidget': (context) => const CustomWidgetPage(),
+          '/calculator': (context) => const CalculatorPage(),
         });
   }
 }
