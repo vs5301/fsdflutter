@@ -9,6 +9,7 @@ class BottomNavigationPage extends StatefulWidget {
 
 class _BottomNavigationPageState extends State<BottomNavigationPage> {
 
+  RangeValues values = RangeValues(0, 1);
   late DateTime datePicked;
   int index = 0;
   var arrColors = [
@@ -30,15 +31,15 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
             child: Row(
               children: [
                 Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
-                  width: 200,
-                  decoration: BoxDecoration(
-                      color: Colors.lightGreen,
-                      borderRadius: BorderRadius.circular(21),
-                      border: Border.all(
-                          width: 2,
-                          color: Colors.black
+                    margin: EdgeInsets.only(bottom: 11),
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                        color: Colors.lightGreen,
+                        borderRadius: BorderRadius.circular(21),
+                        border: Border.all(
+                            width: 2,
+                            color: Colors.black
                         )
                     )
                 ),
@@ -85,23 +86,23 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
             ),
           ),
           Container(
-              margin: EdgeInsets.only(bottom: 11),
-              height: 200,
-              decoration: BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.circular(21),
-                  border: Border.all(
-                      width: 2,
-                      color: Colors.black
-                  ),
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: 51,
-                    color: Colors.grey,
-                    spreadRadius: 21,
-                  )
-                ],
+            margin: EdgeInsets.only(bottom: 11),
+            height: 200,
+            decoration: BoxDecoration(
+              color: Colors.grey,
+              borderRadius: BorderRadius.circular(21),
+              border: Border.all(
+                  width: 2,
+                  color: Colors.black
               ),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 51,
+                  color: Colors.grey,
+                  spreadRadius: 21,
+                )
+              ],
+            ),
           ),
           Container(
               margin: EdgeInsets.only(bottom: 11),
@@ -132,31 +133,31 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
     ),
     RichText(
         text: TextSpan(
-          style: TextStyle(
-            color: Colors.grey,
-            fontSize: 21
-          ),
-          children: <TextSpan>[
-            TextSpan(text: 'Hello'),
-            TextSpan(text: 'World!', style: TextStyle(
-              fontSize: 34,
-              color: Colors.blue,
-              fontWeight: FontWeight.bold,
-            )),
-            TextSpan(
-              text: 'Welcome to ',
+            style: TextStyle(
+                color: Colors.grey,
+                fontSize: 21
             ),
-            TextSpan(
-              text: 'Flutter',
-              style: TextStyle(
+            children: <TextSpan>[
+              TextSpan(text: 'Hello'),
+              TextSpan(text: 'World!', style: TextStyle(
+                fontSize: 34,
+                color: Colors.blue,
                 fontWeight: FontWeight.bold,
-                fontSize: 43,
-                color: Colors.deepOrangeAccent,
-                fontStyle: FontStyle.italic,
-                fontFamily: 'Montserrat',
+              )),
+              TextSpan(
+                text: 'Welcome to ',
+              ),
+              TextSpan(
+                  text: 'Flutter',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 43,
+                    color: Colors.deepOrangeAccent,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: 'Montserrat',
+                  )
               )
-            )
-          ]
+            ]
         )
     ),
     // const Text("This is Tab3", style: TextStyle(color: Colors.green),),
@@ -173,14 +174,14 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
           color: Colors.grey,
         ),
         Container(
-            width: 100,
-            height: 100,
-            color: Colors.blue,
+          width: 100,
+          height: 100,
+          color: Colors.blue,
         ),
         Container(
-            width: 100,
-            height: 100,
-            color: Colors.grey,
+          width: 100,
+          height: 100,
+          color: Colors.grey,
         ),
         Container(
           width: 100,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fsdflutter/tutorials/bottom_navbar.dart';
 import 'package:fsdflutter/tutorials/calculator.dart';
 import 'package:fsdflutter/tutorials/news_list_page.dart';
+import 'package:fsdflutter/tutorials/range_slider.dart';
 import 'package:fsdflutter/tutorials/row_columns.dart';
 import 'package:fsdflutter/tutorials/tab_navigation.dart';
 
@@ -237,19 +238,20 @@ class _NavigationDrawerPageState extends State<NavigationDrawerPage> {
                 color: Colors.black12,
                 height: 1,
               ),
-              // ListTile(
-              //   title: Text("Profile Settings"),
-              //   subtitle: Text("Payment information"),
-              //   leading: Icon(Icons.person),
-              //   trailing: Icon(Icons.keyboard_arrow_right),
-              //   onTap: (){
-              //
-              //   },
-              // ),
-              // Container(
-              //   color: Colors.black12,
-              //   height: 1,
-              // ),
+              ListTile(
+                title: Text("Range Slider"),
+                subtitle: Text("UI element range slider"),
+                leading: Icon(Icons.date_range),
+                trailing: Icon(Icons.keyboard_arrow_right),
+                onTap: (){
+                  var route = MaterialPageRoute(builder: (context) => const RangeSliderPage());
+                  Navigator.push(context, route);
+                },
+              ),
+              Container(
+                color: Colors.black12,
+                height: 1,
+              ),
               // ListTile(
               //   title: Text("Help & Support"),
               //   subtitle: Text("Payment information"),

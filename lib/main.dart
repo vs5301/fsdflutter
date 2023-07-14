@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fsdflutter/tutorials/calculator.dart';
 import 'package:fsdflutter/tutorials/custom_widget.dart';
+import 'package:fsdflutter/tutorials/splash_screen.dart';
 import 'package:fsdflutter/tutorials/widget_class.dart';
 import 'package:fsdflutter/tutorials/bottom_navbar.dart';
 import 'package:fsdflutter/tutorials/navigation_drawer.dart';
@@ -41,33 +42,35 @@ class MyApp extends StatelessWidget {
           //
           // This works for code too, not just values: Most code changes can be
           // tested with just a hot reload.
-          primarySwatch: Colors.red,
-          appBarTheme: AppBarTheme(color: Colors.red),
+          // primarySwatch: Colors.red,
+          // appBarTheme: AppBarTheme(color: Colors.red),
           textTheme: TextTheme(
             displayLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             titleMedium: TextStyle(fontSize: 11, fontWeight: FontWeight.w500, fontStyle: FontStyle.italic)
           )
         ),
+        home: SplashScreen(),
         debugShowCheckedModeBanner: false,
         // home: PageOne (),
-        initialRoute: '/drawer',
-        routes: {
-          '/': (context) => const NavigationDrawerPage(),
-          '/home': (context) => const HomePage(),
-          '/pageOne': (context) => const PageOne(),
-          '/pageTwo': (context) => const PageTwo(),
-          '/newsList': (context) => const NewsListPage(),
-          '/newsDetails': (context) => const NewsDetails(),
-          '/drawer': (context) => const NavigationDrawerPage(),
-          '/bottom': (context) => const BottomNavigationPage(),
-          '/newsApi': (context) => const NewsPage(),
-          '/rowcol': (context) => const RowColumnsPage(),
-          '/tabnav': (context) => const TabBarPage(),
-          '/widgetClass': (context) => const WidgetClassPage(),
-          '/stackWidget': (context) => const StackWidgetPage(),
-          '/customWidget': (context) => const CustomWidgetPage(),
-          '/calculator': (context) => const CalculatorPage(),
-        });
+        // initialRoute: '/drawer',
+        // routes: {
+        //   '/': (context) => const NavigationDrawerPage(),
+        //   '/home': (context) => const HomePage(),
+        //   '/pageOne': (context) => const PageOne(),
+        //   '/pageTwo': (context) => const PageTwo(),
+        //   '/newsList': (context) => const NewsListPage(),
+        //   '/newsDetails': (context) => const NewsDetails(),
+        //   '/drawer': (context) => const NavigationDrawerPage(),
+        //   '/bottom': (context) => const BottomNavigationPage(),
+        //   '/newsApi': (context) => const NewsPage(),
+        //   '/rowcol': (context) => const RowColumnsPage(),
+        //   '/tabnav': (context) => const TabBarPage(),
+        //   '/widgetClass': (context) => const WidgetClassPage(),
+        //   '/stackWidget': (context) => const StackWidgetPage(),
+        //   '/customWidget': (context) => const CustomWidgetPage(),
+        //   '/calculator': (context) => const CalculatorPage(),
+        // }
+    );
   }
 }
 
